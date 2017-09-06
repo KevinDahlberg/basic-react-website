@@ -9772,6 +9772,7 @@ var image = _react2.default.createElement(_ProfilePicture.ProfilePicture, {
   alt: 'Awesome Profile Pic'
 });
 var about = _react2.default.createElement(_AboutText.AboutText, {
+  title: 'About',
   paragraphOne: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum lorem eu quam bibendum, nec maximus dolor sagittis. Vestibulum libero libero, finibus at odio vitae, lacinia laoreet purus. Nulla sit amet justo vel nisi dictum viverra. Phasellus varius aliquet neque, a pretium metus. Proin molestie nisi nibh, non tristique metus auctor sit amet. Aliquam quis erat sapien. Fusce dignissim, purus non pulvinar venenatis, sem tortor sodales arcu, vitae tempor felis risus sit amet lectus. Donec ante nulla, vestibulum a risus quis, feugiat feugiat erat.',
   paragraphTwo: 'Vestibulum sodales risus eget ex efficitur sagittis. Donec bibendum lectus pulvinar risus volutpat dapibus. Aliquam sit amet odio elit. Nullam a accumsan lacus. Nullam commodo ac nibh quis aliquam. Praesent quis sem porttitor, facilisis lectus nec, rhoncus orci. Etiam a massa congue, efficitur nunc non, aliquet erat. Praesent libero quam, sollicitudin non lectus in, blandit faucibus diam. Duis iaculis vehicula fermentum. Nullam vitae risus ac mi congue condimentum  sit amet eu justo. Aenean vestibulum semper neque at dictum. Fusce luctus quam eu lorem tristique, eu tincidunt quam dignissim. Praesent lobortis gravida risus in auctor. Cras tempor pretium tortor elementum volutpat. Suspendisse sagittis mauris non dolor luctus condimentum. In sodales condimentum nisl, sed mollis urna lobortis in.'
 });
@@ -22501,12 +22502,18 @@ var _react2 = _interopRequireDefault(_react);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var AboutText = exports.AboutText = function AboutText(_ref) {
-  var paragraphOne = _ref.paragraphOne,
+  var title = _ref.title,
+      paragraphOne = _ref.paragraphOne,
       paragraphTwo = _ref.paragraphTwo;
 
   return _react2.default.createElement(
     "div",
     { className: "about" },
+    _react2.default.createElement(
+      "h2",
+      null,
+      title
+    ),
     _react2.default.createElement(
       "p",
       null,

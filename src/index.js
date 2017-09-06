@@ -1,11 +1,32 @@
 import React from 'react'
 import { render } from 'react-dom'
 
-import Header from './components/header';
-import Footer from './components/footer';
+
+const Header = ({headerText}) => {
+  return (
+    <div className="header">
+      <h1>{headerText}</h1>
+    </div>
+  );
+}
+
+const Footer = ({footerText}) => {
+  return (
+    <div className="footer">
+      <div className="footer-text">
+        {footerText}
+      </div>
+    </div>
+  );
+}
+
+const head = <Header headerText='Kevin Dahlberg' />
+const foot = <Footer footerText='copyright 2017' />
 
 render (
-  <Header headerText = {'Kevin Dahlberg'} />
-  <Footer footerText = {'Copyright: The OCD Coder'} />,
-  getElementById('container');
+  <main>
+    {head}
+    {foot}
+  </main>,
+  document.getElementById('container')
 )

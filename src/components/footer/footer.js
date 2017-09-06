@@ -1,10 +1,10 @@
 import React from 'react'
 
-export default const Footer (props) => {
+export default const Footer ({footerText}) => {
   return (
     <div className="footer">
       <div className="footer-text">
-        {props.text}
+        {footerText}
       </div>
     </div>
   );

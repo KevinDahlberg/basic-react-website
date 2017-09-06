@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default const Header (props) => {
+export default const Header ({headerText}) => {
   return (
     <div className="header">
-      <h1>{props.name}</h1>
+      <h1>{headerText}</h1>
     </div>
   );
 }

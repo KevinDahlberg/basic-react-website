@@ -8,7 +8,7 @@ import {ProfilePicture} from './components/profile-picture/ProfilePicture';
 
 const head = <Header headerText='Kevin Dahlberg' />
 const image = <ProfilePicture
-                url=''
+                url='/images/profile-pic.jpg'
                 alt='Awesome Profile Pic'
               />
 const about = <AboutText
@@ -21,8 +21,10 @@ const foot = <Footer footerText='copyright 2017' />
 render (
   <main>
     {head}
+    <div className="content">
     {about}
     {image}
+    </div>
     {foot}
   </main>,
   document.getElementById('container')

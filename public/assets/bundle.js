@@ -9768,7 +9768,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var head = _react2.default.createElement(_Header.Header, { headerText: 'Kevin Dahlberg' });
 var image = _react2.default.createElement(_ProfilePicture.ProfilePicture, {
-  url: '',
+  url: '/images/profile-pic.jpg',
   alt: 'Awesome Profile Pic'
 });
 var about = _react2.default.createElement(_AboutText.AboutText, {
@@ -9781,8 +9781,12 @@ var foot = _react2.default.createElement(_Footer.Footer, { footerText: 'copyrigh
   'main',
   null,
   head,
-  about,
-  image,
+  _react2.default.createElement(
+    'div',
+    { className: 'content' },
+    about,
+    image
+  ),
   foot
 ), document.getElementById('container'));
 

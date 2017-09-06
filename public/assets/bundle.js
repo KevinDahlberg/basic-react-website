@@ -9756,19 +9756,33 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactDom = __webpack_require__(98);
 
-var _header = __webpack_require__(184);
+var _Header = __webpack_require__(186);
 
-var _footer = __webpack_require__(185);
+var _Footer = __webpack_require__(187);
+
+var _AboutText = __webpack_require__(188);
+
+var _ProfilePicture = __webpack_require__(189);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var head = _react2.default.createElement(_header.Header, { headerText: 'Kevin Dahlberg' });
-var foot = _react2.default.createElement(_footer.Footer, { footerText: 'copyright 2017' });
+var head = _react2.default.createElement(_Header.Header, { headerText: 'Kevin Dahlberg' });
+var image = _react2.default.createElement(_ProfilePicture.ProfilePicture, {
+  url: '',
+  alt: 'Awesome Profile Pic'
+});
+var about = _react2.default.createElement(_AboutText.AboutText, {
+  paragraphOne: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum lorem eu quam bibendum, nec maximus dolor sagittis. Vestibulum libero libero, finibus at odio vitae, lacinia laoreet purus. Nulla sit amet justo vel nisi dictum viverra. Phasellus varius aliquet neque, a pretium metus. Proin molestie nisi nibh, non tristique metus auctor sit amet. Aliquam quis erat sapien. Fusce dignissim, purus non pulvinar venenatis, sem tortor sodales arcu, vitae tempor felis risus sit amet lectus. Donec ante nulla, vestibulum a risus quis, feugiat feugiat erat.',
+  paragraphTwo: 'Vestibulum sodales risus eget ex efficitur sagittis. Donec bibendum lectus pulvinar risus volutpat dapibus. Aliquam sit amet odio elit. Nullam a accumsan lacus. Nullam commodo ac nibh quis aliquam. Praesent quis sem porttitor, facilisis lectus nec, rhoncus orci. Etiam a massa congue, efficitur nunc non, aliquet erat. Praesent libero quam, sollicitudin non lectus in, blandit faucibus diam. Duis iaculis vehicula fermentum. Nullam vitae risus ac mi congue condimentum  sit amet eu justo. Aenean vestibulum semper neque at dictum. Fusce luctus quam eu lorem tristique, eu tincidunt quam dignissim. Praesent lobortis gravida risus in auctor. Cras tempor pretium tortor elementum volutpat. Suspendisse sagittis mauris non dolor luctus condimentum. In sodales condimentum nisl, sed mollis urna lobortis in.'
+});
+var foot = _react2.default.createElement(_Footer.Footer, { footerText: 'copyright 2017' });
 
 (0, _reactDom.render)(_react2.default.createElement(
   'main',
   null,
   head,
+  about,
+  image,
   foot
 ), document.getElementById('container'));
 
@@ -22399,7 +22413,9 @@ module.exports = ReactDOMInvalidARIAHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 184 */
+/* 184 */,
+/* 185 */,
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22431,7 +22447,7 @@ var Header = exports.Header = function Header(_ref) {
 };
 
 /***/ }),
-/* 185 */
+/* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22459,6 +22475,77 @@ var Footer = exports.Footer = function Footer(_ref) {
       { className: "footer-text" },
       footerText
     )
+  );
+};
+
+/***/ }),
+/* 188 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.AboutText = undefined;
+
+var _react = __webpack_require__(32);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var AboutText = exports.AboutText = function AboutText(_ref) {
+  var paragraphOne = _ref.paragraphOne,
+      paragraphTwo = _ref.paragraphTwo;
+
+  return _react2.default.createElement(
+    "div",
+    { className: "about" },
+    _react2.default.createElement(
+      "p",
+      null,
+      paragraphOne
+    ),
+    _react2.default.createElement(
+      "p",
+      null,
+      paragraphTwo
+    )
+  );
+};
+
+/***/ }),
+/* 189 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.ProfilePicture = undefined;
+
+var _react = __webpack_require__(32);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ProfilePicture = exports.ProfilePicture = function ProfilePicture(_ref) {
+  var url = _ref.url,
+      alt = _ref.alt;
+
+  return _react2.default.createElement(
+    "div",
+    { className: "profile-pic" },
+    _react2.default.createElement("img", {
+      className: "pic",
+      src: url,
+      alt: alt
+    })
   );
 };
 
